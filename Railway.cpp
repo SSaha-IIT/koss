@@ -29,7 +29,7 @@ class user
     tickets[4]=0;
    };
   void sign();
-  void profile();
+  void profile(user);
   void reserve(user);
   void retrieve(char*,char*);
   user ilog();
@@ -244,7 +244,7 @@ void user::reserve(user type)                     //reserve
   }
 }
        
-void user::profile()                 //profile 
+void user::profile(user send)                 //profile 
 {
   train temp2;
   system("clear");
@@ -273,7 +273,7 @@ void user::profile()                 //profile
    { 
     cin>>i;
     if(i==1)
-     page2(temp);
+     page2(send);
     else if(i==2)
      exit(0);
     else
@@ -371,7 +371,7 @@ void page1()                               //page 1
             page2(perm);
             break;
     case 2: m=0;                                      //done
-	          temp.sign();
+	    temp.sign();
             break;
     case 3: m=0;
             trains();                                 //done  
@@ -402,7 +402,7 @@ void page2(user perm)                               //page 2
            break;
    case 2: perm.reserve(perm);         //done
            break;
-   case 3: perm.profile();         //done - works
+   case 3: perm.profile(perm);         //done - works
            break;
    case 4: olog();            //done -works
            break;
