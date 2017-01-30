@@ -98,7 +98,7 @@ void user::sign()                       //sign up
   system("clear");
   file.seekg(0,ios::beg);
   int c=0;
-  cout<<"Enter full name:";
+  cout<<"Enter first name:";
   cin>>send.fname;
   while(c!=1)
    { 
